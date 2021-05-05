@@ -11,7 +11,7 @@ $text = $telegram->Text();
 
 //Web-Scraping variables
 
-$url = file_get_html('https://islom.uz/vaqtlar/27/5');
+$url = file_get_html('https://islom.uz/vaqtlar/27/5'); 
 $tbody = $url->find('tbody', 0);
 $today = $tbody->find('tr[class="p_day bugun"]', 0);
 $tomorrow = $tbody->find('tr[class="p_day erta"]', 0);
@@ -48,6 +48,8 @@ switch ($text) {
         fastingDua();
         break;
 }
+
+//Functions
 
 function mainMenu()
 {
